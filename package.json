@@ -1,0 +1,26 @@
+{
+    "name": "mesh-optimizer",
+    "version": "0.0.1",
+    "description": "mesh optimizer",
+    "author": "Cocos Creator",
+    "main": "main.js",
+    "editor": "^1.0.0",
+    "menu": {
+        "Packages/Mesh Optimizer": {
+            "message": "open"
+        }
+    },
+    "panel": {
+        "title": "Mesh Optimizer",
+        "main": "./panel.js",
+        "icon": "./icon.png",
+        "save": true,
+        "min-width": 400,
+        "min-height": 300,
+        "width": 500,
+        "height": 600
+    },
+    "dependencies": {
+        "gltfpack": "^0.14.0"
+    }
+}
