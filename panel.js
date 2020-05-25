@@ -13,6 +13,7 @@ exports.style = `
 
 .top {
   height: 30px;
+  text-align: center;
 }
 
 .middle {
@@ -22,6 +23,7 @@ exports.style = `
 
 .bottom {
   height: 30px;
+  text-align: center;
 }
 `;
 
@@ -32,15 +34,15 @@ exports.template = `
 </div>
 
 <div class="middle layout vertical">  
-  <ui-section header="Basics">
+  <ui-section header="Basics" expand>
       <ui-prop>
           <ui-label>input gltf</ui-label>
-          <ui-input id='-i' placeholder="输入的GLTF文件路径..."></ui-input>
+          <ui-input id='-i' placeholder="(必填)输入的GLTF文件路径..."></ui-input>
       </ui-prop>
       
       <ui-prop>
           <ui-label>output gltf</ui-label>
-          <ui-input id='-o' placeholder="输出的GLTF文件路径..."></ui-input>
+          <ui-input id='-o' placeholder="(必填)输出的GLTF文件路径..."></ui-input>
       </ui-prop>
 
       <ui-prop  type="string">
@@ -178,7 +180,7 @@ exports.template = `
   </ui-section>
 </div>
 
-<div class="bottom layout horizontal end-justified" style="text-align:center;">
+<div class="bottom layout horizontal end-justified">
   <ui-button id="exec">执行</ui-button>
 </div>
 `;
