@@ -11,9 +11,6 @@ module.exports = {
 
     // 插件所监听的消息
     messages: {
-        'say-hello' () {
-            console.log('Hello World!');
-        },
         'open' () {
             Editor.Panel.open('mesh-optimizer');
         },

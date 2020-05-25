@@ -229,10 +229,6 @@ exports.listeners = {
 
 // 消息监听
 exports.messages = {
-  // 自己定义一个 say-hello 消息让其他人来触发
-  'say-hello' () {
-    console.log('hello');
-  },
 };
 
 var isRunning = false;
@@ -296,7 +292,7 @@ exports.ready = function () {
 // 面板关闭的时候会触发，如果 return false，会中断关闭流程
 exports.beforeClose = function () {
   if (isRunning) {
-    console.warn("please try close the window later, mesh optimizer is running.");
+    console.warn("please try close the window later, the mesh optimizer is running.");
     return false;
   }
 };
