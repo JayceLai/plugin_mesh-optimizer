@@ -244,6 +244,16 @@ exports.ready = function () {
     // var cmd = 'npx gltfpack'; //npx
     var cmd = 'node ' + join(__dirname, '/node_modules/gltfpack/bin/gltfpack.js'); //node
     //basics
+    if (that.$._i.value == '') {
+      isRunning = false;
+      console.error('please enter the path to the input gltf file.');
+      return;
+    }
+    if (that.$._o.value == '') {
+      isRunning = false;
+      console.error('please enter the path to the output gltf file.');
+      return;
+    }
     cmd += ' -i ' + that.$._i.value;
     cmd += ' -o ' + that.$._o.value;
     var _cVlaue = that.$._c.value;
