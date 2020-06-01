@@ -8,6 +8,7 @@ const pkg = require('./package.json');
 // 加载编辑器里的 Vue
 module.paths.push(join(Editor.App.path, 'node_modules'));
 const Vue = require('vue/dist/vue.js');
+require('fix-path')(); // for mac
 
 let panel = null;
 let vm = null;
