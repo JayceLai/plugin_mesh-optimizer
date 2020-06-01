@@ -1,0 +1,70 @@
+'use strict';
+
+module.exports = {
+    execute: 'Execute',
+    executeWarn: 'Mesh optimizer is running',
+    executeWarnClose: 'Mesh optimizer is running, please try close the window later.',
+    executeEnd: 'Mesh optimizer finished working.',
+    
+    basics: {
+        input: 'Input GLTF',
+        inputTip: 'Require the input GLTF file path.',
+        output: 'Output GLTF',
+        outputTip: 'Require the output GLTF file path',
+        compress: 'Compress level',
+    },
+    textures: {
+        buffer: 'Textures into main buffer',
+        bufferTip: 'Embed all textures into main buffer (.bin or .glb)',
+        basis: 'Textures to basis universal format',
+        basisTip: 'Convert all textures to Basis Universal format (with basisu executable); But it is deprecated.',
+        KTX2: 'Textures to KTX2',
+        KTX2Tip: 'Convert all textures to KTX2 with BasisU supercompression (using BasisU executable)',
+        quality: 'Texture quality',
+        qualityTip: 'Set texture encoding quality',
+        UASTC: 'Use UASTC',
+        UASTCTip: 'Use UASTC when encoding textures (much higher quality and much larger size)',
+    },
+    simplification: {
+        ratioR: 'Achieve the ratio R',
+        ratioRTip: 'Simplify meshes to achieve the ratio R',
+        aggressively: 'Aggressively simplify',
+        aggressivelyTip: 'Aggressively simplify to the target ratio disregarding quality',
+    },
+    vertices: {
+        bitPosition: 'N-bit positions',
+        bitPositionTip: 'Use N-bit quantization for positions',
+        bitCorodinates: 'N-bit corodinates',
+        bitCorodinatesTip: 'Use N-bit quantization for texture corodinates',
+        bitNormals: 'N-bit normals and tangents',
+        bitNormalsTip: 'Use N-bit quantization for normals and tangents',
+    },
+    animation: {
+        bitTranslations: 'N-bit translations',
+        bitTranslationsTip: 'Use N-bit quantization for translations',
+        bitRotations: 'N-bit rotations',
+        bitRotationsTip: 'Use N-bit quantization for rotations',
+        bitScale: 'N-bit scale',
+        bitScaleTip: 'Use N-bit quantization for scale',
+        resample: 'Resample animations',
+        resampleTip: 'Resample animations at N Hz',
+        constant: 'Constant animation',
+        constantTip: 'Keep constant animation tracks even if they don\'t modify the node transform',
+    },
+    scene: {
+        transform: 'Keep nodes transform',
+        transformTip: 'Keep named nodes and meshes attached to named nodes so that named nodes can be transformed externally',
+        data: 'Keep extras data',
+        dataTip: 'Keep extras data',
+    },
+    miscellaneous: {
+        compressed: 'Produce compressed',
+        compressedTip: 'Produce compressed GLTF GLB files with fallback for loaders that don\'t support compression',
+        disable: 'Disable quantization',
+        disableTip: 'Disable quantization; produces much larger glTF files with no extensions',
+        verbose: 'Verbose output',
+        verboseTip: 'Verbose output (print version when used without other options)',
+        display: 'display help and exit',
+        displayTip: 'display this help and exit',
+    }
+}

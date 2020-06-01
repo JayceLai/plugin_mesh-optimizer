@@ -1,0 +1,70 @@
+'use strict';
+
+module.exports = {
+    execute: '执行',
+    executeWarn: 'Mesh optimizer 正在运行',
+    executeWarnClose: 'Mesh optimizer 正在运行，请运行结束后再关闭窗口',
+    executeEnd: 'Mesh optimizer 运行结束',
+    
+    basics: {
+        input: '输入 GLTF',
+        inputTip: '必填， 输入的 GLTF 文件路径。',
+        output: '输出 GLTF',
+        outputTip: '必填， 输出的 GLTF 文件路径。',
+        compress: '压缩级别',
+    },
+    textures: {
+        buffer: '纹理进入主缓冲',
+        bufferTip: '将所有纹理嵌入主缓冲区( .bin 或 .glb )',
+        basis: '纹理以通用格式为基础',
+        basisTip: '转换所有纹理的基础通用格式(与 basisu 可执行);但已不推荐使用这项配置',
+        KTX2: '纹理到 KTX2',
+        KTX2Tip: '使用 BasisU 超压缩将所有纹理转换为 KTX2(使用 BasisU 可执行文件)',
+        quality: '纹理质量',
+        qualityTip: '设置纹理编码质量',
+        UASTC: '使用 UASTC',
+        UASTCTip: '当编码纹理时使用 UASTC (高质量和大尺寸)',
+    },
+    simplification: {
+        ratioR: '达到 R 比例',
+        ratioRTip: '对网格进行简化，达到 R 比例',
+        aggressively: '强力简化',
+        aggressivelyTip: '强力简化达到目标比率，会影响质量',
+    },
+    vertices: {
+        bitPosition: 'N-bit 位置',
+        bitPositionTip: '对位置使用 N-bit 量化',
+        bitCorodinates: 'N-bit 坐标',
+        bitCorodinatesTip: '对纹理相关性使用 N-bit 量化',
+        bitNormals: 'N-bit 法线切线',
+        bitNormalsTip: '对法线和切线使用 N-bit 量化',
+    },
+    animation: {
+        bitTranslations: 'N-bit 平移',
+        bitTranslationsTip: '对平移使用 N-bit 量化',
+        bitRotations: 'N-bit 旋转',
+        bitRotationsTip: '对旋转使用 N-bit 量化',
+        bitScale: 'N-bit 缩放',
+        bitScaleTip: '对缩放使用 N-bit 量化',
+        resample: '重新取样动画',
+        resampleTip: '在 N Hz 重新采样动画',
+        constant: '恒定的动画',
+        constantTip: '保持持续的动画跟踪，即使它们不修改节点转换',
+    },
+    scene: {
+        transform: '保持节点变换',
+        transformTip: '保持命名节点和网格连接到命名节点，以便可以从外部转换命名节点',
+        data: '保持额外的数据',
+        dataTip: '保持额外的数据',
+    },
+    miscellaneous: {
+        compressed: '产生压缩',
+        compressedTip: '为不支持压缩的加载器生成带有回退的压缩 GLTF GLB 文件',
+        disable: '禁用量子化',
+        disableTip: '禁用量化; 生成更大的没有扩展的glTF文件',
+        verbose: '详细输出',
+        verboseTip: '详细输出(没有其他选项时的打印版本)',
+        display: '显示此帮助并退出',
+        displayTip: '显示此帮助并退出',
+    }
+}

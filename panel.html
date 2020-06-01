@@ -1,0 +1,222 @@
+<div id="root">
+    <div class="settings">
+        <ui-section header="Basics" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n 
+                    value="mesh-optimizer.basics.input"
+                ></ui-label>
+                <ui-input slot="content" ref='i' 
+                    :placeholder="t('basics.inputTip')"
+                ></ui-input>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.basics.output"
+                ></ui-label>
+                <ui-input slot="content" ref='o' 
+                    :placeholder="t('basics.outputTip')"
+                ></ui-input>
+            </ui-prop>
+
+            <ui-prop type="string">
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.basics.compress"
+                ></ui-label>
+                <ui-select slot="content" ref="c" value="0">
+                    <option value="0">None</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Higher</option>
+                </ui-select>
+            </ui-prop>
+        </ui-section>
+
+        <ui-section header="Textures" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.textures.buffer"
+                    :title="t('textures.bufferTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='te'></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.textures.basis"
+                    :title="t('textures.basisTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='tb'></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.textures.KTX2"
+                    :title="t('textures.KTX2Tip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='tc'></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.textures.quality"
+                    :title="t('textures.qualityTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='tq' value="50" min="1" max="100"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.textures.UASTC"
+                    :title="t('textures.UASTCTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='tu'></ui-checkbox>
+            </ui-prop>
+        </ui-section>
+
+        <ui-section header="Simplification" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.simplification.ratioR"
+                    :title="t('simplification.ratioRTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='si' value="1" min="0" max="1"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.simplification.aggressively"
+                    :title="t('simplification.aggressivelyTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='sa'></ui-checkbox>
+            </ui-prop>
+        </ui-section>
+
+        <ui-section header="Vertices" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.vertices.bitPosition"
+                    :title="t('vertices.bitPositionTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='vp' value="14" min="1" max="16"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.vertices.bitCorodinates"
+                    :title="t('vertices.bitCorodinatesTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='vt' value="12" min="1" max="16"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.vertices.bitNormals"
+                    :title="t('vertices.bitNormalsTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='vn' value="8" min="1" max="16"></ui-slider>
+            </ui-prop>
+        </ui-section>
+
+        <ui-section header="Animation" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.animation.bitTranslations"
+                    :title="t('animation.bitTranslationsTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='at' value="16" min="1" max="24"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.animation.bitRotations"
+                    :title="t('animation.bitRotationsTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='ar' value="12" min="4" max="16"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.animation.bitScale"
+                    :title="t('animation.bitScaleTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='as' value="16" min="1" max="24"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.animation.resample"
+                    :title="t('animation.resampleTip')"
+                ></ui-label>
+                <ui-slider slot="content" ref='af' value="30" min="1" max="144"></ui-slider>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.animation.constant"
+                    :title="t('animation.constantTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='ac'></ui-checkbox>
+            </ui-prop>
+        </ui-section>
+
+        <ui-section header="Scene" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.scene.transform"
+                    :title="t('scene.transformTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='kn'></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.scene.data"
+                    :title="t('scene.dataTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='ke'></ui-checkbox>
+            </ui-prop>
+        </ui-section>
+
+        <ui-section header="Miscellaneous" expand>
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.miscellaneous.compressed"
+                    :title="t('miscellaneous.compressedTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='cf'></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.miscellaneous.disable"
+                    :title="t('miscellaneous.disableTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='noq' checked></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.miscellaneous.verbose"
+                    :title="t('miscellaneous.verboseTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='v' checked></ui-checkbox>
+            </ui-prop>
+
+            <ui-prop>
+                <ui-label slot="label" i18n
+                    value="mesh-optimizer.miscellaneous.display"
+                    :title="t('miscellaneous.displayTip')"
+                ></ui-label>
+                <ui-checkbox slot="content" ref='h'></ui-checkbox>
+            </ui-prop>
+        </ui-section>
+    </div>
+
+    <div class="commands">
+        <ui-button
+            @confirm="run()"
+        >
+            <ui-label i18n value="mesh-optimizer.execute"></ui-label>
+        </ui-button>
+    </div>
+</div>
