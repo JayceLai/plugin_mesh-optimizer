@@ -5,7 +5,7 @@ module.exports = {
     executeWarn: 'Mesh optimizer 正在运行',
     executeWarnClose: 'Mesh optimizer 正在运行，请运行结束后再关闭窗口',
     executeEnd: 'Mesh optimizer 运行结束',
-    
+
     basics: {
         input: '输入 GLTF',
         inputTip: '必填， 输入的 GLTF 文件路径。',
@@ -58,8 +58,8 @@ module.exports = {
         dataTip: '保持额外的数据',
     },
     miscellaneous: {
-        compressed: '产生压缩',
-        compressedTip: '为不支持压缩的加载器生成带有回退的压缩 GLTF GLB 文件',
+        compressed: '生成额外的回退压缩文件',
+        compressedTip: '为不支持压缩的加载器生成带有回退的压缩文件（GLTF/GLB格式）',
         disable: '禁用量子化',
         disableTip: '禁用量化; 生成更大的没有扩展的glTF文件',
         verbose: '详细输出',

@@ -5,7 +5,7 @@ module.exports = {
     executeWarn: 'Mesh optimizer is running',
     executeWarnClose: 'Mesh optimizer is running, please try close the window later.',
     executeEnd: 'Mesh optimizer finished working.',
-    
+
     basics: {
         input: 'Input GLTF',
         inputTip: 'Require the input GLTF file path.',
