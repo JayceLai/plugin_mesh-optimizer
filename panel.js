@@ -35,10 +35,10 @@ exports.ready = function () {
     },
     methods: {
       // i18n 翻译
-      t(key) {
+      t (key) {
         return Editor.I18n.t(`${pkg.name}.${key}`);
       },
-      run() {
+      run () {
         if (isRunning) {
           return console.warn(vm.t('executeWarn'));
         }
@@ -100,7 +100,7 @@ exports.ready = function () {
           if (vm.$refs.cf.value) { cmd += ' -cf'; }
           if (vm.$refs.noq.value) { cmd += ' -noq'; }
           if (vm.$refs.v.value) { cmd += ' -v'; }
-          if (vm.$refs.h.value) { cmd += ' -h'; }
+          // if (vm.$refs.h.value) { cmd += ' -h'; }
 
           console.log(cmd);
 
