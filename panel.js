@@ -5,7 +5,7 @@ const { exec } = require('child_process');
 const { readFileSync } = require("fs");
 const pkg = require('./package.json');
 
-// 加载编辑器里的 Vue
+// 加载编辑器里的 node_modules
 module.paths.push(join(Editor.App.path, 'node_modules'));
 const Vue = require('vue/dist/vue.js');
 require('fix-path')(); // for mac
